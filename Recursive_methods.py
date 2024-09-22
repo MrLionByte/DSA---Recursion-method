@@ -63,9 +63,9 @@ def recursion_binary(arr, target, lower, upper):
     if arr[mid] == target:
         return f'{arr[mid]} ON index {mid} '
     elif arr[mid] < target:
-        return recursion_binary(arr, target, lower+1, upper)
+        return recursion_binary(arr, target, mid+1, upper)
     else:
-        return recursion_binary(arr, target, lower, upper - 1)
+        return recursion_binary(arr, target, lower, mid - 1)
 
 def binary_search(arr, target):
     arr = sorted(arr)
